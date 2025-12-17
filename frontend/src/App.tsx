@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   return (
     <>
-     <p className='font-bold text-red-700 text-2xl'>hi everyone</p>
+     <p className='agbalumo-regular font-bold text-5xl'>Juno</p>
     </>
   )
 }
