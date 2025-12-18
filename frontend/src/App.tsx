@@ -5,7 +5,19 @@ import card2 from './assets/Card 3.png';
 import card3 from './assets/Card 5.png';
 import plus from './assets/plus.png';
 
+
+
 function App() {
+  function handleClick() {
+    alert('Button clicked!');
+  }
+
+  const cardData = [
+    { id: 1, image: card1 },
+    { id: 2, image: card2 },
+    { id: 3, image: card3 },
+  ]
+
   return (
     <>
       <div className='grid grid-flow-col gap-10 justify-between'>
@@ -16,9 +28,11 @@ function App() {
       </div>
       <div className='card-section'>
         <div className='mt-20 grid-row-4 grid-flow-col grid gap-7'>
-          <img src={card1} alt="card 1" className='h-120 shadow-2xl rounded-4xl' />
-          <img src={card2} alt="card 1" className='h-120 shadow-2xl rounded-4xl' />
-          <img src={card3} alt="card 1" className='h-120 shadow-2xl rounded-4xl' />
+          {
+            cardData.map(card => (
+              <img key={card.id} src={card.image} alt={`card ${card.id}`} className='h-120 shadow-xl rounded-4xl' onClick={handleClick} />
+            ))
+          }
         </div>
       </div>
     </>
