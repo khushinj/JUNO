@@ -16,9 +16,9 @@ function App() {
       </div>
       <div className='card-section'>
         <div className='mt-20 grid-row-4 grid-flow-col grid gap-7'>
-          <img src={card1} alt="card 1" className='h-120' />
-          <img src={card2} alt="card 1" className='h-120' />
-          <img src={card3} alt="card 1" className='h-120' />
+          <img src={card1} alt="card 1" className='h-120 shadow-2xl rounded-4xl' />
+          <img src={card2} alt="card 1" className='h-120 shadow-2xl rounded-4xl' />
+          <img src={card3} alt="card 1" className='h-120 shadow-2xl rounded-4xl' />
         </div>
       </div>
     </>
