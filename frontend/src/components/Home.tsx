@@ -18,16 +18,13 @@ function Home() {
     { id: 4, image: card4 },
   ];
 
-  const handleCardClick = (cardId: number) => {
-    navigate(`/card/${cardId}`);
-  };
 
   return (
     <>
       <div className='grid grid-flow-col gap-10 justify-between'>
         <p className='agbalumo-regular font-bold text-5xl'>Juno</p>
         <button
-          className='bg-gray-300 border border-black border-2 w-15 h-15 rounded-full flex items-center justify-center p-2'
+          className='bg-gray-300 cursor-pointer border border-black border-2 w-15 h-15 rounded-full flex items-center justify-center p-2'
           onClick={() => setShowForm(true)}
         >
           <img src={plus} alt="" className='h-5 w-5' />
@@ -42,7 +39,7 @@ function Home() {
               src={card.image}
               alt={`card ${card.id}`}
               className='sm:h-80 md:h-120 shadow-xl rounded-4xl cursor-pointer hover:opacity-90 transition-opacity'
-              onClick={() => handleCardClick(card.id)}
+              onClick={() => navigate(`/card/${card.id}`)}
             />
           ))}
         </div>

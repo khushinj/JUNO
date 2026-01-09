@@ -1,9 +1,22 @@
 import '../App.css';
 import { useParams, useNavigate } from 'react-router-dom';
+import card1 from '../assets/Card1.png';
+import card2 from '../assets/Card 3.png';
+import card3 from '../assets/Card 5.png';
+import card4 from '../assets/Card 6.png';
+
+const cardData = [
+  { id: 1, image: card1 },
+  { id: 2, image: card2 },
+  { id: 3, image: card3 },
+  { id: 4, image: card4 },
+];
 
 function DetailedView() {
   const { cardId } = useParams<{ cardId: string }>();
   const navigate = useNavigate();
+  
+  const card = cardData.find(c => c.id === parseInt(cardId!));
 
   return (
     <div className="detailed-view p-6 bg-white rounded-xl shadow-2xl max-w-3xl mx-auto mt-10">
@@ -13,9 +26,9 @@ function DetailedView() {
       </p>
       <div className="image-container mb-6">
         <img
-          src="https://via.placeholder.com/600x400"
+          src={card?.image}
           alt="Detailed View"
-          className="w-full h-auto rounded-md shadow-md"
+          className="shadow-xl rounded-4xl"
         />
       </div>
       <button className="bg-black text-white rounded-md px-4 py-2" onClick={() => navigate('/')}>
