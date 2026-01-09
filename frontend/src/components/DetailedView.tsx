@@ -25,7 +25,7 @@ function DetailedView() {
         This is a detailed view of the selected item. Here you can provide more information and context about the item.
       </p> */}
       <div className="grid grid-cols-3 gap-5">
-        <div className="image-container mb-6">
+        <div className="image-container mb-6 mt-7">
           <img
             src={card?.image}
             alt="Detailed View"
@@ -35,6 +35,14 @@ function DetailedView() {
 
         <div className="hahmlet text-6xl col-span-2">
           This month I'm focusing on
+
+          <div className="para livvic-regular text-2xl mt-8">
+            This month I’m focusing on 
+            This month I’m focusing on 
+            This month I’m focusing on 
+            This month I’m focusing on 
+            This month I’m focusing on
+          </div>
         </div>
       </div>
       <button className="bg-black text-white rounded-md px-4 py-2" onClick={() => navigate('/')}>
