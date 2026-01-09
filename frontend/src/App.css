@@ -5,3 +5,11 @@
   margin: 0 auto;
   padding: 2rem;
 }
+
+
+.hahmlet {
+  font-family: "Hahmlet", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

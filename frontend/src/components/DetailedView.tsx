@@ -15,21 +15,27 @@ const cardData = [
 function DetailedView() {
   const { cardId } = useParams<{ cardId: string }>();
   const navigate = useNavigate();
-  
+
   const card = cardData.find(c => c.id === parseInt(cardId!));
 
   return (
-    <div className="detailed-view p-6 bg-white rounded-xl shadow-2xl max-w-3xl mx-auto mt-10">
-      <h2 className="text-3xl font-semibold mb-4">Detailed View - Card {cardId}</h2>
-      <p className="text-gray-700 mb-6">
+    <div className="detailed-view p-6 bg-white rounded-xl shadow-2xl mt-10">
+      {/* <h2 className="text-3xl font-semibold mb-4">Detailed View - Card {cardId}</h2> */}
+      {/* <p className="text-gray-700 mb-6">
         This is a detailed view of the selected item. Here you can provide more information and context about the item.
-      </p>
-      <div className="image-container mb-6">
-        <img
-          src={card?.image}
-          alt="Detailed View"
-          className="shadow-xl rounded-4xl"
-        />
+      </p> */}
+      <div className="grid grid-cols-3 gap-5">
+        <div className="image-container mb-6">
+          <img
+            src={card?.image}
+            alt="Detailed View"
+            className="shadow-xl rounded-4xl h-120"
+          />
+        </div>
+
+        <div className="hahmlet text-6xl col-span-2">
+          This month I'm focusing on
+        </div>
       </div>
       <button className="bg-black text-white rounded-md px-4 py-2" onClick={() => navigate('/')}>
         Back to Home
