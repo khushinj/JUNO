@@ -35,13 +35,13 @@ function Home() {
       </div>
       {showForm && <Form onClose={() => setShowForm(false)} />}
       <div className='card-section'>
-        <div className='mt-20 lg:grid-cols-3 md:grid-cols-2 sm:justify-items-center sm:grid-cols-1 grid gap-7'>
+        <div className='mt-20 lg:grid-cols-3 sm:grid-cols-2 justify-items-center xs:grid-cols-1 grid gap-7'>
           {cardData.map(card => (
             <img
               key={card.id}
               src={card.image}
               alt={`card ${card.id}`}
-              className='h-120 shadow-xl rounded-4xl cursor-pointer hover:opacity-90 transition-opacity'
+              className='sm:h-80 md:h-120 shadow-xl rounded-4xl cursor-pointer hover:opacity-90 transition-opacity'
               onClick={() => handleCardClick(card.id)}
             />
           ))}
